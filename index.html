@@ -11,7 +11,7 @@
 </head>
 <body>
   <div id="header" class="wrapper">
-    <header>
+    <header class="main-menu">
       <div class="menu">
         <h1><a href="./index.html"><img class="logo" src="./images/top.png" alt="home-icon"></a></h1>
         <nav>
@@ -34,7 +34,7 @@
         <h2>Airbnbホストになって、暮らしをレベルアップ</h2>
         <p>宿泊施設の内容を記入</p>
         <form class="host-form" action="#" method="get">
-          <input type="text" name="area" placeholder="東京">
+          <input class="area" type="text" name="area" placeholder="東京">
           <div class="selectors">
               <select name="room-type" class="room-type">
                 <option selected value="entire-home">まるまる貸切</option>
@@ -60,10 +60,20 @@
                 <option value="16">ゲスト16人</option>
               </select>
           </div>
-          <input class="begin" type="submit" value="はじめる">
+          <input class="begin start-searching" type="submit" value="はじめる">
         </form>
-      </section>
+      </section> <!-- /.class-form -->
     </div>
+    <section class="wrapper sales-points">
+      <div class="point">
+        <h3 class="sub-title">Airbnbでホストするこれだけの理由</h3>
+        <p class="description">どんなお家やお部屋でも、Airbnbなら簡単かつ安全にシェアでき、世界中の旅好きな仲間とつながれます。 予約可能日から料金、ハウスルール、ゲストとの交流程度まで、すべて自分で決めることができます。</p>
+      </div>
+      <div class="point">
+        <h3 class="sub-title">困ったときも安心</h3>
+        <p class="description">万一に備えるUS$1,000,000の財物補償、US$1,000,000の賠償責任保険が全予約に自動付帯。ホストのみなさまと建物・家財の安全をお守りするため全力で取り組んでいます。</p>
+      </div>
+    </section>
   </main>
   <footer></footer>
 </body>

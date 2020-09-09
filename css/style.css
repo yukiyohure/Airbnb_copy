@@ -18,19 +18,25 @@ a {
   color: #484848;
 }
 .wrapper {
-  max-width: 1100px;
+  max-width: 1080px;
   margin: 0 auto; /* 横幅が大きい画面サイズでも不自然にならないようにわざと指定 */
-  padding: 0 4%; /* 横幅が大きい画面サイズでも不自然にならないようにわざと指定 */
+  padding: 0 2%; /* 横幅が大きい画面サイズでも不自然にならないようにわざと指定 */
 }
 .big-bg {
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
 }
+.sub-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.875;
+  color: #484848;
+}
 
 /* ヘッダー
 -------------------- */
-header {
+.main-menu {
   display: flex;
   width: 100%;
   height: 82px;
@@ -78,9 +84,10 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: baseline;
+  margin-bottom: 64px;
 }
 
-/* ホストの検索
+/* ホストの検索ボックス
 -------------------- */
 .house-form {
   background: #fff;
@@ -107,15 +114,16 @@ header {
 
 /* フォーム
 ------------------- */
-input[type="text"],
-select {
+.area,
+.room-type,
+.capacity {
   padding: 11px;
   border-radius: 4px;
   border: 1px #eee solid;
   width: 100%;
   line-height: 1.5;
 }
-input[name="area"] {
+.area {
   display: block;
   margin-bottom: 10px;
 }
@@ -140,8 +148,24 @@ input[name="area"] {
   display: block;
   background: transparent;
 }
-.host-form input[type=submit] {
+.start-searching {
   width: 100%;
   height: 100%;
   padding: 13px 0;
+}
+
+/* セールスポイント
+-------------------- */
+.sales-points {
+  display: flex;
+  justify-content: flex-start;
+}
+.point {
+  margin-right: 64px;
+  width: 444px;
+}
+.description {
+  margin-top: 10px;
+  line-height: 1.75;
+  color: #484848;
 }
