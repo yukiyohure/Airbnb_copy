@@ -27,6 +27,21 @@ a {
     background-position: center top;
     background-repeat: no-repeat;
 }
+.subject {
+  text-align: center;
+  margin-bottom: 90px;
+}
+.subject-decoration {
+  width: 64px;
+  border-bottom: 2px #484848 solid;
+  margin: 0 auto 26px;
+}
+.subject-content {
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 1.06;
+  color: #333;
+}
 .sub-title {
   font-size: 1.5rem;
   font-weight: 800;
@@ -159,6 +174,7 @@ a {
 .sales-points {
   display: flex;
   justify-content: flex-start;
+  margin-bottom: 75px;
 }
 .point {
   margin-right: 64px;
@@ -168,4 +184,30 @@ a {
   margin-top: 10px;
   line-height: 1.75;
   color: #484848;
+}
+
+/* ホストになる3ステップ
+------------------ */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 297px);
+  justify-content: space-between;
+  margin-bottom: 392px;
+}
+.check-sign {
+  margin-bottom: 16px;
+  width: 48px;
+  height: 48ox;
+}
+.step-title {
+  color: #484848;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.25;
+}
+.step-content {
+  margin: 16px 0;
+}
+.how-to-start-being-host {
+  color: #006c70;
 }
