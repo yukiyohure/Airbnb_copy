@@ -10,12 +10,21 @@ html {
 body {
   font-family: "Circular", -apple-system, "BlinkMacSystemFont", "Roboto", "Helvetica Neue", "sans-serif";
 }
+i.fas {
+-webkit-font-smoothing:antialiased;
+-webkit-text-stroke-color:#fff;
+-webkit-text-stroke-width:1px
+}
 ul {
   list-style: none;
 }
-a {
+.header-link {
   text-decoration: none;
   color: #484848;
+}
+.link {
+  text-decoration: none;
+  color: #008489;
 }
 .wrapper {
   max-width: 1080px;
@@ -29,7 +38,7 @@ a {
 }
 .subject {
   text-align: center;
-  margin-bottom: 90px;
+  margin-bottom: 64px;
 }
 .subject-decoration {
   width: 64px;
@@ -73,7 +82,9 @@ a {
   text-decoration-line: underline;
 }
 .logo {
-  margin: 17px 0 0 20px;
+  display: inline-block;
+  margin: 25px 20px 25px 0;
+  color: #008489;
 }
 .begin {
   display: block;
@@ -210,9 +221,6 @@ a {
   line-height: 1.75;
   color: #484848;
 }
-.how-to-start-being-host {
-  color: #006c70;
-}
 
 /* お客様の声
 ------------------ */
@@ -220,6 +228,7 @@ a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
+  margin-bottom: 160px;
 }
 .review-content {
   width: 433px;
@@ -249,4 +258,27 @@ a {
   height: 48px;
   border-radius: 4px;
   border: 2px #484848 solid;
+}
+
+/* 保証・保険
+------------------- */
+.insurance-section   {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+}
+.explanation {
+  width: 420px;
+}
+.explanation-content {
+  margin: 16px 0;
+  line-height: 1.75;
+}
+.check {
+  color: #008489;
+  margin-right: 1rem;
+}
+.insurance-list li {
+  margin-bottom: 1rem;
+  line-height: 1.75rem;
 }
