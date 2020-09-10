@@ -8,7 +8,7 @@ html {
   color: #484848;
 }
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Circular", -apple-system, "BlinkMacSystemFont", "Roboto", "Helvetica Neue", "sans-serif";
 }
 ul {
   list-style: none;
@@ -113,7 +113,7 @@ a {
 }
 .house-form h2 {
   font-size: 39px;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1;
   margin-bottom: 24px;
   color: #484848;
@@ -192,7 +192,7 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, 297px);
   justify-content: space-between;
-  margin-bottom: 392px;
+  margin-bottom: 160px;
 }
 .check-sign {
   margin-bottom: 16px;
@@ -207,7 +207,46 @@ a {
 }
 .step-content {
   margin: 16px 0;
+  line-height: 1.75;
+  color: #484848;
 }
 .how-to-start-being-host {
   color: #006c70;
+}
+
+/* お客様の声
+------------------ */
+.customer-review {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+}
+.review-content {
+  width: 433px;
+  padding-top: 32px;
+}
+.quote {
+  color: #fdb32b;
+  margin-bottom: 5px;
+}
+.message {
+  font-size: 2rem;
+  font-weight: 50;
+  color: #484848;
+  line-height: 1.25;
+}
+.extra-information {
+  margin: 24px 0;
+}
+.information {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.375;
+  color: #767676;
+}
+.practice-case-link {
+  width: 224px;
+  height: 48px;
+  border-radius: 4px;
+  border: 2px #484848 solid;
 }
