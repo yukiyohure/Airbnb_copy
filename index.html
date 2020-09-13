@@ -37,11 +37,14 @@
         <form class="host-form" action="#" method="get">
           <input class="area" type="text" name="area" placeholder="東京">
           <div class="selectors">
+            <div class="room-type-wrapper">
               <select name="room-type" class="room-type">
                 <option selected value="entire-home">まるまる貸切</option>
                 <option value="private-room">個室</option>
                 <option value="shared-room">シェアルーム</option>
               </select>
+            </div>
+            <div class="capacity-wrapper">
               <select name="capacity" class="capacity">
                 <option value="1">ゲスト1人</option>
                 <option value="2">ゲスト2人</option>
@@ -60,6 +63,7 @@
                 <option value="15">ゲスト15人</option>
                 <option value="16">ゲスト16人</option>
               </select>
+            </div>
           </div>
           <input class="begin start-searching" type="submit" value="はじめる">
         </form>
@@ -427,9 +431,10 @@
         </div>
       </section>
       <section class="options">
-        <span class="nationalization">
-          <a href="#" class="lang"><i class="lang-icon fas fa-globe fa-lg"></i>日本語(JP)</a>
-          <a href="#" class="currency"><span class="jpy">¥</span>JPY</a>
+        <span class="international">
+          <a href="#" class="lang"><i class="lang-icon fas fa-globe"></i>日本語(JP)</a>
+          <span class="jpy">¥</span>
+          <a href="#" class="currency">JPY</a>
         </span>
         <span class="sns">
           <a href="#" class="sns-icon fb"><i class="fab fa-facebook-f fa-lg"></i></a>

@@ -18,6 +18,14 @@ i.fas {
 ul {
   list-style: none;
 }
+input:focus,
+select:focus {
+  border: 1px solid #469196;
+  outline:0;
+}
+select {
+  border-radius: 4px;
+}
 .header-link {
   text-decoration: none;
   color: #484848;
@@ -162,18 +170,49 @@ ul {
   justify-content: space-between;
   margin-bottom: 30px;
 }
-
+.room-type-wrapper {
+  width: 57%;
+  position: relative;
+}
+.room-type-wrapper::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border: 0px;
+  border-bottom: solid 2px #484848;
+  border-right: solid 2px #484848;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 35%;
+  right: 20px;
+}
 .room-type {
   line-height: 24px;
-  width: 57%;
+  width: 100%;
   color: #888;
   margin-right: 10px;
   display: block;
   background: transparent;
 }
+.capacity-wrapper {
+  width: 38%;
+  position: relative;
+}
+.capacity-wrapper::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border: 0px;
+  border-bottom: solid 2px #484848;
+  border-right: solid 2px #484848;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 35%;
+  right: 20px;
+}
 .capacity {
   line-height: 24px;
-  width: 38%;
+  width: 100%;
   color: #888;
   display: block;
   background: transparent;
@@ -516,11 +555,11 @@ footer {
 .copyright-link-items a:hover {
   text-decoration-line: underline;
 }
-.nationalization {
+.international a {
   font-size: 14px;
   font-weight: 600;
   margin-right: 32px;
-  text-decoration-line: underline;
+  text-decoration-line: underline ;
 }
 .lang {
   margin-right: 24px;
@@ -529,7 +568,7 @@ footer {
   margin-right: 8px;
 }
 .sns {
-  margin-left: 32px;
+  margin-left: 16px;
 }
 .sns-icon:not(:last-child) {
   margin-right: 24px;
