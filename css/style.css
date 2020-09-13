@@ -25,6 +25,10 @@ ul {
 .link {
   text-decoration: none;
   color: #008489;
+  transition: text-decoration-lilne 250ms ease;
+}
+.link:hover {
+  text-decoration-line: underline;
 }
 .wrapper {
   max-width: 1080px;
@@ -225,14 +229,23 @@ ul {
 /* お客様の声
 ------------------ */
 .customer-review {
+  margin-bottom: 160px;
+}
+.customer-review {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
-  margin-bottom: 160px;
 }
 .review-content {
   width: 433px;
   padding-top: 32px;
+}
+.tessa-review {
+  margin-bottom: 96px;
+}
+.tessa-review-content {
+  margin-left: auto;
+  padding-top: 100px;
 }
 .quote {
   color: #fdb32b;
@@ -266,6 +279,7 @@ ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
+  margin-bottom: 96px;
 }
 .explanation {
   width: 420px;
@@ -281,4 +295,242 @@ ul {
 .insurance-list li {
   margin-bottom: 1rem;
   line-height: 1.75rem;
+}
+
+/* 真ん中のDennisさんの写真
+--------------------- */
+.cleaning-house {
+  object-fit: cover;
+  margin-bottom: 160px;
+}
+
+/* シンプルな決済
+------------------ */
+.payment-feature-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  grid-gap: 65px;
+  margin-bottom: 160px;
+}
+.payment-feature-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #484848;
+  padding: 2px 0;
+}
+.payment-feature-content {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #484848;
+  line-height: 1.75;
+  margin: 1rem 0;
+}
+
+/* 夢を共有する仲間が世界に
+-------------------- */
+.subject-about-dream {
+  margin-bottom: 225px;
+}
+
+/* Airbnbについて
+-------------------- */
+.what-is-airbnb-section {
+  margin-bottom: 160px;
+}
+.explanations-of-airbnb {
+  display: grid;
+  grid-template-columns: repeat(2, 444px);
+  justify-content: stretch;
+  grid-gap: 85px;
+}
+.explanation-title {
+  line-height: 1.25rem;
+  font-size: 1.5rem;
+  color: #484848;
+}
+
+/* よくある質問
+-------------------- */
+.questions {
+  display: grid;
+  grid: repeat(3, 75px) / repeat(2, 1fr);
+  grid-gap: 0 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 90px;
+}
+.question {
+  display: block;
+  font-size: 1.125rem;
+  line-height: 1.625;
+}
+.question::after {
+  display: block;
+  position: relative;
+  top: 25px;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #ebebeb;
+}
+
+/* ホスティングの詳細はこちら
+-------------------- */
+.hosting-detail {
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+}
+.details {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fill, 333px);
+  margin-bottom: 94px;
+}
+.detail {
+  color: #484848;
+}
+.detail-image {
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+.detail-title {
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 22px;
+  margin-bottom: 2px;
+}
+.detail-content {
+  margin-bottom: 8px;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 22px;
+}
+.more-detail {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+/* 収益化してみますか？
+------------------- */
+.closing-image-wrapper {
+  background-image: url("../images/closing-image.jpg");
+  max-width: 1280px;
+  height: 440px;
+  object-fit: cover;
+  margin: 0 auto 64px;
+  background-position: center center;
+  background-size: cover;
+}
+.monetize-wrapper {
+  max-width: 430px;
+  position: relative;
+  top: 96px;
+  left: 124px;
+}
+.monetize-message {
+  font-size: 60px;
+  line-height: 64px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 38px;
+  letter-spacing: -2.5px;
+}
+.start-monetizing-button {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 22px;
+  background: #fff;
+  color: #484848;
+  border-radius: 4px;
+  line-height: 24px;
+  font-weight: 800;
+  border: 2px transparent solid;
+}
+
+/* フッター
+-------------- */
+footer {
+  padding-top: 48px;
+  background: #f7f7f7;
+}
+.footer-above {
+  max-width: 1440px;
+  padding: 0 80px;
+  display: grid;
+  grid: 305px / repeat(auto-fill, 302px);
+  justify-content: space-between;
+  color: #222;
+  font-size: 12px;
+  padding-bottom: 48px;
+}
+.footer-above-title {
+}
+.footer-link-items {
+  margin-top: 16px;
+}
+.footer-link {
+  text-decoration: none;
+  color: #222;
+  line-height: 18px;
+  font-size: 14px;
+  transition: text-decoration-line 250ms ease;
+}
+.footer-link:hover {
+  text-decoration-line: underline;
+}
+.footer-below {
+  display: flex;
+  justify-content: space-between;
+  width: 1280px;
+  margin: 0 auto;
+  border-top: 1px #ddd solid;
+  padding: 24px 0;
+}
+.footer-below a {
+  color: #484848;
+  text-decoration: none;
+  font-size: 14px;
+}
+.company-detail-line {
+  display: block;
+}
+.company-details {
+  transition: text-decoration-line 250ms ease;
+}
+.company-details:hover {
+  text-decoration-line: underline;
+}
+.copyright-wrapper {
+  line-height: 1;
+}
+.copyright-link {
+  display: inline;
+  list-style-type: disc;
+}
+.copyright-link-items {
+  display: inline;
+  transition: text-decoration-line 250ms ease;
+}
+.copyright-link-items a:hover {
+  text-decoration-line: underline;
+}
+.nationalization {
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 32px;
+  text-decoration-line: underline;
+}
+.lang {
+  margin-right: 24px;
+}
+.lang-icon {
+  margin-right: 8px;
+}
+.sns {
+  margin-left: 32px;
+}
+.sns-icon:not(:last-child) {
+  margin-right: 24px;
 }
