@@ -1,1 +1,575 @@
-@charset "UTG-8";
+@charset "UTF-8";
+
+/* 共通
+-------------------- */
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  color: #484848;
+}
+body {
+  font-family: "Circular", -apple-system, "BlinkMacSystemFont", "Roboto", "Helvetica Neue", "sans-serif";
+}
+i.fas {
+-webkit-font-smoothing:antialiased;
+-webkit-text-stroke-color:#fff;
+-webkit-text-stroke-width:1px
+}
+ul {
+  list-style: none;
+}
+input:focus,
+select:focus {
+  border: 1px solid #469196;
+  outline:0;
+}
+select {
+  border-radius: 4px;
+}
+.header-link {
+  text-decoration: none;
+  color: #484848;
+}
+.link {
+  text-decoration: none;
+  color: #008489;
+  transition: text-decoration-lilne 250ms ease;
+}
+.link:hover {
+  text-decoration-line: underline;
+}
+.wrapper {
+  max-width: 1080px;
+  margin: 0 auto; /* 横幅が大きい画面サイズでも不自然にならないようにわざと指定 */
+  padding: 0 2%; /* 横幅が大きい画面サイズでも不自然にならないようにわざと指定 */
+}
+.big-bg {
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+.subject {
+  text-align: center;
+  margin-bottom: 64px;
+}
+.subject-decoration {
+  width: 64px;
+  border-bottom: 2px #484848 solid;
+  margin: 0 auto 26px;
+}
+.subject-content {
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 1.06;
+  color: #333;
+}
+.sub-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.875;
+  color: #484848;
+}
+
+/* ヘッダー
+-------------------- */
+.main-menu {
+  display: none;
+  width: 100%;
+  height: 82px;
+  font-size: 0.875rem;
+  justify-content: space-between;
+}
+.menu {
+  display: flex;
+}
+.main-navigation {
+  display: flex;
+  width: 318px;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-left:15px;
+}
+.main-navigation > li:hover {
+  text-decoration-line: underline;
+}
+.logo {
+  display: inline-block;
+  margin: 25px 20px 25px 0;
+  color: #008489;
+}
+.begin {
+  display: block;
+  width: 88px;
+  height: 34px;
+  color: #fff;
+  background: #e64051;
+  border-radius: 8px;
+  align-self: center;
+}
+.page-name {
+  color: #469196;
+  border-bottom: 2px #469196 solid;
+}
+
+/* 大きな背景画像
+-------------------- */
+.main-bg {
+  background-image: linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),url("../images/main-bg.jpg");
+  width: 100%;
+  min-height: 600px;
+  object-fit: cover;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  margin-bottom: 64px;
+}
+
+/* ホストの検索ボックス
+-------------------- */
+.house-form {
+  background: #fff;
+  max-width: 460px;
+  padding: 32px;
+  border-radius: 4px;
+  margin: 78px 92px 0 0;
+}
+.house-form h2 {
+  font-size: 39px;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 24px;
+  color: #484848;
+}
+.house-form p {
+  font-size: 1rem;
+  color: #484848;
+  line-height: 1.375rem;
+  font-weight: 600;
+  padding-left: 2px;
+  margin-bottom: 5px;
+}
+
+/* フォーム
+------------------- */
+.area,
+.room-type,
+.capacity {
+  padding: 11px;
+  border-radius: 4px;
+  border: 1px #eee solid;
+  width: 100%;
+  line-height: 1.5;
+}
+.area {
+  display: block;
+  margin-bottom: 10px;
+}
+.selectors {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.room-type-wrapper {
+  width: 57%;
+  position: relative;
+}
+.room-type-wrapper::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border: 0px;
+  border-bottom: solid 2px #484848;
+  border-right: solid 2px #484848;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 35%;
+  right: 20px;
+}
+.room-type {
+  line-height: 24px;
+  width: 100%;
+  color: #888;
+  margin-right: 10px;
+  display: block;
+  background: transparent;
+}
+.capacity-wrapper {
+  width: 38%;
+  position: relative;
+}
+.capacity-wrapper::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border: 0px;
+  border-bottom: solid 2px #484848;
+  border-right: solid 2px #484848;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 35%;
+  right: 20px;
+}
+.capacity {
+  line-height: 24px;
+  width: 100%;
+  color: #888;
+  display: block;
+  background: transparent;
+}
+.start-searching {
+  width: 100%;
+  height: 100%;
+  padding: 13px 0;
+}
+
+/* セールスポイント
+-------------------- */
+.sales-points {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 75px;
+}
+.point {
+  margin-right: 64px;
+  width: 444px;
+}
+.description {
+  margin-top: 10px;
+  line-height: 1.75;
+  color: #484848;
+}
+
+/* ホストになる3ステップ
+------------------ */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 297px);
+  justify-content: space-between;
+  margin-bottom: 160px;
+}
+.check-sign {
+  margin-bottom: 16px;
+  width: 48px;
+  height: 48ox;
+}
+.step-title {
+  color: #484848;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.25;
+}
+.step-content {
+  margin: 16px 0;
+  line-height: 1.75;
+  color: #484848;
+}
+
+/* お客様の声
+------------------ */
+.customer-review {
+  margin-bottom: 160px;
+}
+.customer-review {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+}
+.review-content {
+  width: 433px;
+  padding-top: 32px;
+}
+.tessa-review {
+  margin-bottom: 96px;
+}
+.tessa-review-content {
+  margin-left: auto;
+  padding-top: 100px;
+}
+.quote {
+  color: #fdb32b;
+  margin-bottom: 5px;
+}
+.message {
+  font-size: 2rem;
+  font-weight: 50;
+  color: #484848;
+  line-height: 1.25;
+}
+.extra-information {
+  margin: 24px 0;
+}
+.information {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.375;
+  color: #767676;
+}
+.practice-case-link {
+  width: 224px;
+  height: 48px;
+  border-radius: 4px;
+  border: 2px #484848 solid;
+}
+
+/* 保証・保険
+------------------- */
+.insurance-section   {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  margin-bottom: 96px;
+}
+.explanation {
+  width: 420px;
+}
+.explanation-content {
+  margin: 16px 0;
+  line-height: 1.75;
+}
+.check {
+  color: #008489;
+  margin-right: 1rem;
+}
+.insurance-list li {
+  margin-bottom: 1rem;
+  line-height: 1.75rem;
+}
+
+/* 真ん中のDennisさんの写真
+--------------------- */
+.cleaning-house {
+  object-fit: cover;
+  margin-bottom: 160px;
+}
+
+/* シンプルな決済
+------------------ */
+.payment-feature-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  grid-gap: 65px;
+  margin-bottom: 160px;
+}
+.payment-feature-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #484848;
+  padding: 2px 0;
+}
+.payment-feature-content {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #484848;
+  line-height: 1.75;
+  margin: 1rem 0;
+}
+
+/* 夢を共有する仲間が世界に
+-------------------- */
+.subject-about-dream {
+  margin-bottom: 225px;
+}
+
+/* Airbnbについて
+-------------------- */
+.what-is-airbnb-section {
+  margin-bottom: 160px;
+}
+.explanations-of-airbnb {
+  display: grid;
+  grid-template-columns: repeat(2, 444px);
+  justify-content: stretch;
+  grid-gap: 85px;
+}
+.explanation-title {
+  line-height: 1.25rem;
+  font-size: 1.5rem;
+  color: #484848;
+}
+
+/* よくある質問
+-------------------- */
+.questions {
+  display: grid;
+  grid: repeat(3, 75px) / repeat(2, 1fr);
+  grid-gap: 0 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 90px;
+}
+.question {
+  display: block;
+  font-size: 1.125rem;
+  line-height: 1.625;
+}
+.question::after {
+  display: block;
+  position: relative;
+  top: 25px;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #ebebeb;
+}
+
+/* ホスティングの詳細はこちら
+-------------------- */
+.hosting-detail {
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+}
+.details {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fill, 333px);
+  margin-bottom: 94px;
+}
+.detail {
+  color: #484848;
+}
+.detail-image {
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+.detail-title {
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 22px;
+  margin-bottom: 2px;
+}
+.detail-content {
+  margin-bottom: 8px;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 22px;
+}
+.more-detail {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+/* 収益化してみますか？
+------------------- */
+.closing-image-wrapper {
+  background-image: url("../images/closing-image.jpg");
+  max-width: 1280px;
+  height: 440px;
+  object-fit: cover;
+  margin: 0 auto 64px;
+  background-position: center center;
+  background-size: cover;
+}
+.monetize-wrapper {
+  max-width: 430px;
+  position: relative;
+  top: 96px;
+  left: 124px;
+}
+.monetize-message {
+  font-size: 60px;
+  line-height: 64px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 38px;
+  letter-spacing: -2.5px;
+}
+.start-monetizing-button {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 22px;
+  background: #fff;
+  color: #484848;
+  border-radius: 4px;
+  line-height: 24px;
+  font-weight: 800;
+  border: 2px transparent solid;
+}
+
+/* フッター
+-------------- */
+footer {
+  padding-top: 48px;
+  background: #f7f7f7;
+}
+.footer-above {
+  max-width: 1440px;
+  padding: 0 80px;
+  display: grid;
+  grid: 305px / repeat(auto-fill, 302px);
+  justify-content: space-between;
+  color: #222;
+  font-size: 12px;
+  padding-bottom: 48px;
+}
+.footer-above-title {
+}
+.footer-link-items {
+  margin-top: 16px;
+}
+.footer-link {
+  text-decoration: none;
+  color: #222;
+  line-height: 18px;
+  font-size: 14px;
+  transition: text-decoration-line 250ms ease;
+}
+.footer-link:hover {
+  text-decoration-line: underline;
+}
+.footer-below {
+  display: flex;
+  justify-content: space-between;
+  width: 1280px;
+  margin: 0 auto;
+  border-top: 1px #ddd solid;
+  padding: 24px 0;
+}
+.footer-below a {
+  color: #484848;
+  text-decoration: none;
+  font-size: 14px;
+}
+.company-detail-line {
+  display: block;
+}
+.company-details {
+  transition: text-decoration-line 250ms ease;
+}
+.company-details:hover {
+  text-decoration-line: underline;
+}
+.copyright-wrapper {
+  line-height: 1;
+}
+.copyright-link {
+  display: inline;
+  list-style-type: disc;
+}
+.copyright-link-items {
+  display: inline;
+  transition: text-decoration-line 250ms ease;
+}
+.copyright-link-items a:hover {
+  text-decoration-line: underline;
+}
+.international a {
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 32px;
+  text-decoration-line: underline ;
+}
+.lang {
+  margin-right: 24px;
+}
+.lang-icon {
+  margin-right: 8px;
+}
+.sns {
+  margin-left: 16px;
+}
+.sns-icon:not(:last-child) {
+  margin-right: 24px;
+}
