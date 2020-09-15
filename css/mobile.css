@@ -39,14 +39,15 @@ select {
   text-decoration-line: underline;
 }
 .wrapper {
-  max-width: 1080px;
+  width: 100%;
   margin: 0 auto; /* 横幅が大きい画面サイズでも不自然にならないようにわざと指定 */
-  padding: 0 2%; /* 横幅が大きい画面サイズでも不自然にならないようにわざと指定 */
+  padding: 0 4%; /* 横幅が大きい画面サイズでも不自然にならないようにわざと指定 */
+  box-sizing: border-box;
 }
 .big-bg {
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 .subject {
   text-align: center;
@@ -58,7 +59,7 @@ select {
   margin: 0 auto 26px;
 }
 .subject-content {
-  font-size: 60px;
+  font-size:3.75rem;
   font-weight: 900;
   line-height: 1.06;
   color: #333;
@@ -75,7 +76,7 @@ select {
 .main-menu {
   display: none;
   width: 100%;
-  height: 82px;
+  height: 5.125rem;
   font-size: 0.875rem;
   justify-content: space-between;
 }
@@ -84,7 +85,7 @@ select {
 }
 .main-navigation {
   display: flex;
-  width: 318px;
+  width: 100%;
   height: 100%;
   justify-content: space-between;
   align-items: center;
@@ -117,19 +118,21 @@ select {
 .main-bg {
   background-image: linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),url("../images/main-bg.jpg");
   width: 100%;
-  min-height: 600px;
+  min-height: 220px;
   object-fit: cover;
-  display: flex;
-  justify-content: flex-end;
+  background-size: cover;
+  /* display: flex;
+  justify-content: flex-end; */
   align-items: baseline;
-  margin-bottom: 64px;
+  margin-bottom: 4rem;
 }
 
 /* ホストの検索ボックス
 -------------------- */
 .house-form {
+  display: none;
   background: #fff;
-  max-width: 460px;
+  max-width: 100%;
   padding: 32px;
   border-radius: 4px;
   margin: 78px 92px 0 0;
@@ -171,7 +174,7 @@ select {
   margin-bottom: 30px;
 }
 .room-type-wrapper {
-  width: 57%;
+  width: 100%;
   position: relative;
 }
 .room-type-wrapper::after {
@@ -195,7 +198,7 @@ select {
   background: transparent;
 }
 .capacity-wrapper {
-  width: 38%;
+  width: 100%;
   position: relative;
 }
 .capacity-wrapper::after {
@@ -227,12 +230,12 @@ select {
 -------------------- */
 .sales-points {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: center;
   margin-bottom: 75px;
 }
 .point {
-  margin-right: 64px;
-  width: 444px;
+  width: 100%;
 }
 .description {
   margin-top: 10px;
@@ -244,7 +247,7 @@ select {
 ------------------ */
 .steps {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 297px);
+  grid-template-columns: repeat(auto-fit, 1fr);
   justify-content: space-between;
   margin-bottom: 160px;
 }
@@ -272,11 +275,15 @@ select {
 }
 .customer-review {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   justify-content: space-between;
 }
+.customer-photo img {
+  max-width: 100%;
+  height: 100%;
+}
 .review-content {
-  width: 433px;
+  width: 100%;
   padding-top: 32px;
 }
 .tessa-review {
@@ -316,12 +323,12 @@ select {
 ------------------- */
 .insurance-section   {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fill, 1fr);
   justify-content: space-between;
   margin-bottom: 96px;
 }
 .explanation {
-  width: 420px;
+  width: 100%;
 }
 .explanation-content {
   margin: 16px 0;
@@ -347,7 +354,7 @@ select {
 ------------------ */
 .payment-feature-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   justify-content: space-between;
   grid-gap: 65px;
   margin-bottom: 160px;
@@ -380,7 +387,7 @@ select {
 }
 .explanations-of-airbnb {
   display: grid;
-  grid-template-columns: repeat(2, 444px);
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   justify-content: stretch;
   grid-gap: 85px;
 }
@@ -394,7 +401,7 @@ select {
 -------------------- */
 .questions {
   display: grid;
-  grid: repeat(3, 75px) / repeat(2, 1fr);
+  grid: repeat(auto-fit, 5px) / repeat(auto-fit, 1fr);
   grid-gap: 0 20px;
   justify-content: space-between;
   align-items: center;
@@ -424,11 +431,15 @@ select {
 .details {
   display: grid;
   justify-content: space-between;
-  grid-template-columns: repeat(auto-fill, 333px);
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   margin-bottom: 94px;
 }
 .detail {
   color: #484848;
+}
+.detail img {
+  width: 100%;
+  height: 100%;
 }
 .detail-image {
   margin-bottom: 1rem;
@@ -455,7 +466,7 @@ select {
 ------------------- */
 .closing-image-wrapper {
   background-image: url("../images/closing-image.jpg");
-  max-width: 1280px;
+  max-width: 100vw;
   height: 440px;
   object-fit: cover;
   margin: 0 auto 64px;
@@ -463,10 +474,10 @@ select {
   background-size: cover;
 }
 .monetize-wrapper {
-  max-width: 430px;
+  max-width: 100%;
   position: relative;
-  top: 96px;
-  left: 124px;
+  /* top: 96px; */
+  /* left: 124px; */
 }
 .monetize-message {
   font-size: 60px;
@@ -522,7 +533,7 @@ footer {
 .footer-below {
   display: flex;
   justify-content: space-between;
-  width: 1280px;
+  width: 100vw;
   margin: 0 auto;
   border-top: 1px #ddd solid;
   padding: 24px 0;
