@@ -44,7 +44,7 @@ select {
 .wrapper {
   width: 100%;
   margin: 0 auto; /* 横幅が大きい画面サイズでも不自然にならないようにわざと指定 */
-  padding: 0 5%; /* 横幅が大きい画面サイズでも不自然にならないようにわざと指定 */
+  padding: 0 1.5rem; /* 横幅が大きい画面サイズでも不自然にならないようにわざと指定 */
   box-sizing: border-box;
 }
 .big-bg {
@@ -296,14 +296,14 @@ select {
 }
 .review-content {
   width: 100%;
-  padding-top: 32px;
+  padding-top: 1rem;
 }
 .tessa-review {
   margin-bottom: 96px;
 }
 .tessa-review-content {
   margin-left: auto;
-  padding-top: 100px;
+  /* padding-top: 100px; */
 }
 .quote {
   color: #fdb32b;
@@ -344,8 +344,8 @@ select {
   margin-bottom: 2rem;
 }
 .explanation-content {
-  margin: 16px 0;
-  line-height: 1.75;
+  margin: 1rem 0;
+  line-height: 1.375;
   font-size: 1rem;
 }
 .check {
@@ -360,7 +360,7 @@ select {
 /* 真ん中のDennisさんの写真
 --------------------- */
 .cleaning-house-wrapper {
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
 }
 .cleaning-house {
   width: 90vw;
@@ -374,8 +374,8 @@ select {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   justify-content: space-between;
-  grid-gap: 65px;
-  margin-bottom: 160px;
+  grid-gap: 2rem;
+  margin-bottom: 6rem;
 }
 .payment-feature-title {
   font-size: 1.5rem;
@@ -388,7 +388,7 @@ select {
   font-size: 1rem;
   font-weight: 400;
   color: #484848;
-  line-height: 1.75;
+  line-height: 1.375;
   margin: 1rem 0;
 }
 
@@ -401,34 +401,37 @@ select {
 /* Airbnbについて
 -------------------- */
 .what-is-airbnb-section {
-  margin-bottom: 160px;
+  margin-bottom: 6rem;
 }
 .explanations-of-airbnb {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   justify-content: stretch;
-  grid-gap: 85px;
+  grid-gap: 3rem;
 }
 .explanation-title {
   line-height: 1.25rem;
   font-size: 1.5rem;
   color: #484848;
+  padding: 0.125rem 0;
+  margin-bottom: 1rem;
 }
 
 /* よくある質問
 -------------------- */
 .questions {
   display: grid;
-  grid: repeat(auto-fit, 5px) / repeat(auto-fit, 1fr);
-  grid-gap: 0 20px;
+  grid: repeat(auto-fit, 1fr) / repeat(auto-fit, minmax(100%, 1fr));
+  grid-gap: 1.5rem 0;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 90px;
 }
 .question {
   display: block;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.625;
+  padding-top: 1.5rem;
 }
 .question::after {
   display: block;
@@ -450,24 +453,30 @@ select {
   display: grid;
   justify-content: space-between;
   grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-  margin-bottom: 94px;
+  margin-bottom: 4rem;
+  grid-gap: 1rem;
 }
 .detail {
+  position: relative;
+  z-index: 1;
   color: #484848;
-}
-.detail img {
-  width: 100%;
-  height: 100%;
+  display: flex;
+  border: 1px solid rgba(0 , 0, 0, .1);
+  border-radius: 3px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .06);
 }
 .detail-image {
-  margin-bottom: 1rem;
   object-fit: cover;
 }
+.detail-scripts {
+  text-align: left;
+  margin: 0.625rem 1rem;
+}
 .detail-title {
-  font-size: 1rem;
   font-weight: 800;
-  line-height: 22px;
+  line-height: 1.125;
   margin-bottom: 2px;
+  font-size: 0.875rem;
 }
 .detail-content {
   margin-bottom: 8px;
@@ -478,6 +487,14 @@ select {
 .more-detail {
   font-weight: 300;
   font-size: 14px;
+}
+.sp-more-detail {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* 収益化してみますか？
