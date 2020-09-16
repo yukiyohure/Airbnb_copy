@@ -33,7 +33,12 @@
   </div>
   <main>
     <div class="main-bg big-bg">
-      <section class="house-form">
+      <section class="sp top-phrase-wrapper">
+        <h1 class="sp top-phrase">
+          Airbnbホストになって、暮らしをレベルアップ
+        </h1>
+      </section>
+      <section class="pc house-form">
         <h2>Airbnbホストになって、暮らしをレベルアップ</h2>
         <p>宿泊施設の内容を記入</p>
         <form class="host-form" action="#" method="get">
@@ -72,6 +77,38 @@
       </section> <!-- /.class-form -->
     </div>
     <div class="wrapper">
+      <p class="sp form-instruction">宿泊施設の内容を記入</p>
+      <form class="sp host-form" action="#" method="get">
+        <input class="area" type="text" name="area" placeholder="東京">
+        <div class="room-type-wrapper">
+          <select name="room-type" class="room-type">
+            <option selected value="entire-home">まるまる貸切</option>
+            <option value="private-room">個室</option>
+            <option value="shared-room">シェアルーム</option>
+          </select>
+        </div>
+        <div class="capacity-wrapper">
+          <select name="capacity" class="capacity">
+            <option value="1">ゲスト1人</option>
+            <option value="2">ゲスト2人</option>
+            <option value="3">ゲスト3人</option>
+            <option selected value="4">ゲスト4人</option>
+            <option value="5">ゲスト5人</option>
+            <option value="6">ゲスト6人</option>
+            <option value="7">ゲスト7人</option>
+            <option value="8">ゲスト8人</option>
+            <option value="9">ゲスト9人</option>
+            <option value="10">ゲスト10人></option>
+            <option value="11">ゲスト11人></option>
+            <option value="12">ゲスト12人</option>
+            <option value="13">ゲスト13人</option>
+            <option value="14">ゲスト14人</option>
+            <option value="15">ゲスト15人</option>
+            <option value="16">ゲスト16人</option>
+          </select>
+        </div>
+        <input class="begin start-searching" type="submit" value="はじめる">
+      </form>
       <section class="sales-points">
         <div class="point">
           <h3 class="sub-title">Airbnbでホストするこれだけの理由</h3>
@@ -115,8 +152,9 @@
         </div>
       </div> <!-- /.steps -->
       <section class="customer-review dennis">
-        <div class="review-content">
-          <i class="quote fas fa-quote-left fa-2x"></i>
+        <div class="dennis-comment review-content">
+          <span class="pc"><i class="quote fas fa-quote-left fa-2x"></i></span>
+          <span class="sp"><i class="quote sp fas fa-quote-left fa-lg"></i></span>
           <p class="message">
             「ホスト保証」があったからAirbnb参加を決めたといっても過言でないほどで、被害やトラブルがあったときに頼れるサポートがあるのは本当にありがたいですね。
           </p>
@@ -127,7 +165,7 @@
           </aside>
           <button class="practice-case-link">ホスト実践例をチェック</button>
         </div>
-        <div class="customer-photo">
+        <div class="dennis-photo customer-photo">
           <img width="516px" height="516px" src="./images/Mr_Dennis.jpg" alt="customer-photo">
         </div>
       </section> <!-- /.cistomer-review -->
@@ -154,7 +192,12 @@
           </ul>
         </div>
       </div> <!-- /.insurance-section -->
-      <img class="cleaning-house" width="100%" height="580px" src="./images/Mr_Dennis_is_cleaning.jpg" alt="Mr Dennis is cleaning house">
+      <div class="cleaning-house-wrapper">
+        <img class="pc cleaning-house" width="100%" height="580px" src="./images/Mr_Dennis_is_cleaning.jpg"
+          alt="Mr Dennis is cleaning house">
+        <img class="sp cleaning-house" src="./images/Mr_Dennis_is_cleaning.jpg"
+          alt="Mr Dennis is cleaning house">
+      </div>
       <div class="subject">
         <div class="subject-decoration"></div>
         <h2 class="subject-content">シンプルな決済</h2>

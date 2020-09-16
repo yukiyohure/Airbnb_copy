@@ -10,6 +10,9 @@ html {
 body {
   font-family: "Circular", -apple-system, "BlinkMacSystemFont", "Roboto", "Helvetica Neue", "sans-serif";
 }
+.sp {
+  display: none;
+}
 i.fas {
 -webkit-font-smoothing:antialiased;
 -webkit-text-stroke-color:#fff;

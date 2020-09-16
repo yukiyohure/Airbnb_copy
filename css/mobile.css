@@ -10,6 +10,9 @@ html {
 body {
   font-family: "Circular", -apple-system, "BlinkMacSystemFont", "Roboto", "Helvetica Neue", "sans-serif";
 }
+.pc {
+  display: none;
+}
 i.fas {
 -webkit-font-smoothing:antialiased;
 -webkit-text-stroke-color:#fff;
@@ -41,7 +44,7 @@ select {
 .wrapper {
   width: 100%;
   margin: 0 auto; /* 横幅が大きい画面サイズでも不自然にならないようにわざと指定 */
-  padding: 0 4%; /* 横幅が大きい画面サイズでも不自然にならないようにわざと指定 */
+  padding: 0 5%; /* 横幅が大きい画面サイズでも不自然にならないようにわざと指定 */
   box-sizing: border-box;
 }
 .big-bg {
@@ -50,24 +53,25 @@ select {
   background-repeat: no-repeat;
 }
 .subject {
-  text-align: center;
-  margin-bottom: 64px;
+  text-align: left;
+  margin-bottom: 3rem;
 }
 .subject-decoration {
   width: 64px;
   border-bottom: 2px #484848 solid;
-  margin: 0 auto 26px;
+  margin-bottom: 1.5rem;
 }
 .subject-content {
-  font-size:3.75rem;
+  font-size: 2.5rem;
   font-weight: 900;
-  line-height: 1.06;
+  line-height: 1;
+  letter-spacing: -0.09rem;
   color: #333;
 }
 .sub-title {
   font-size: 1.5rem;
   font-weight: 800;
-  line-height: 1.875;
+  line-height: 1.25;
   color: #484848;
 }
 
@@ -119,38 +123,26 @@ select {
   background-image: linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),url("../images/main-bg.jpg");
   width: 100%;
   min-height: 220px;
+  height: 100%;
   object-fit: cover;
   background-size: cover;
-  /* display: flex;
-  justify-content: flex-end; */
-  align-items: baseline;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
 }
 
-/* ホストの検索ボックス
+/* トップフレーズ
 -------------------- */
-.house-form {
-  display: none;
-  background: #fff;
-  max-width: 100%;
-  padding: 32px;
-  border-radius: 4px;
-  margin: 78px 92px 0 0;
+.top-phrase-wrapper {
+  width: 100%;
+  color: #fff;
+  position: absolute;
+  padding: 18vh 4% 4%;
 }
-.house-form h2 {
-  font-size: 39px;
-  font-weight: 600;
-  line-height: 1;
-  margin-bottom: 24px;
-  color: #484848;
-}
-.house-form p {
-  font-size: 1rem;
-  color: #484848;
-  line-height: 1.375rem;
-  font-weight: 600;
-  padding-left: 2px;
-  margin-bottom: 5px;
+.top-phrase {
+  font-size: 2.125rem;
+  font-weight: 800;
+  line-height: 2.15rem;
+  margin-bottom: 30px;
 }
 
 /* フォーム
@@ -158,11 +150,16 @@ select {
 .area,
 .room-type,
 .capacity {
-  padding: 11px;
+  margin-top: 8px;
+  padding: 0.375rem;
   border-radius: 4px;
   border: 1px #eee solid;
-  width: 100%;
+  width: 100%;  
   line-height: 1.5;
+  font-size: 0.875rem;
+}
+.host-form {
+  margin-bottom: 3rem;
 }
 .area {
   display: block;
@@ -188,6 +185,11 @@ select {
   position: absolute;
   top: 35%;
   right: 20px;
+}
+.form-instruction {
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  font-weight: 600;
 }
 .room-type {
   line-height: 24px;
@@ -221,6 +223,7 @@ select {
   background: transparent;
 }
 .start-searching {
+  margin-top: 1rem;
   width: 100%;
   height: 100%;
   padding: 13px 0;
@@ -232,24 +235,29 @@ select {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 75px;
 }
 .point {
   width: 100%;
+  margin-bottom: 3rem;
 }
 .description {
-  margin-top: 10px;
+  margin: 1rem 0;
   line-height: 1.75;
   color: #484848;
+  font-size: 1rem;
 }
 
 /* ホストになる3ステップ
 ------------------ */
 .steps {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-template-columns: repeat(auto-fit, minmx(100%, 1fr));
   justify-content: space-between;
-  margin-bottom: 160px;
+  margin-bottom: 5rem;
+}
+.step {
+  margin-bottom: 2rem;
+  box-sizing: border-box;
 }
 .check-sign {
   margin-bottom: 16px;
@@ -263,20 +271,24 @@ select {
   line-height: 1.25;
 }
 .step-content {
-  margin: 16px 0;
-  line-height: 1.75;
+  margin: 1rem 0;
+  line-height: 1.375;
   color: #484848;
 }
 
 /* お客様の声
 ------------------ */
-.customer-review {
-  margin-bottom: 160px;
+.dennis-comment {
+  order: 2;
+}
+.dennis-photo {
+  order: 1;
 }
 .customer-review {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   justify-content: space-between;
+  margin-bottom: 6rem;
 }
 .customer-photo img {
   max-width: 100%;
@@ -298,18 +310,18 @@ select {
   margin-bottom: 5px;
 }
 .message {
-  font-size: 2rem;
+  font-size: 1.125rem;
   font-weight: 50;
   color: #484848;
-  line-height: 1.25;
+  line-height: 1.4;
 }
 .extra-information {
-  margin: 24px 0;
+  margin: 1rem 0;
 }
 .information {
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 400;
-  line-height: 1.375;
+  line-height: 1.28;
   color: #767676;
 }
 .practice-case-link {
@@ -323,16 +335,18 @@ select {
 ------------------- */
 .insurance-section   {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   justify-content: space-between;
-  margin-bottom: 96px;
+  margin-bottom: 3rem;
 }
 .explanation {
   width: 100%;
+  margin-bottom: 2rem;
 }
 .explanation-content {
   margin: 16px 0;
   line-height: 1.75;
+  font-size: 1rem;
 }
 .check {
   color: #008489;
@@ -345,9 +359,13 @@ select {
 
 /* 真ん中のDennisさんの写真
 --------------------- */
+.cleaning-house-wrapper {
+  margin-bottom: 3rem;
+}
 .cleaning-house {
+  width: 90vw;
+  height: 90vw;
   object-fit: cover;
-  margin-bottom: 160px;
 }
 
 /* シンプルな決済
@@ -509,7 +527,7 @@ footer {
   max-width: 1440px;
   padding: 0 80px;
   display: grid;
-  grid: 305px / repeat(auto-fill, 302px);
+  grid: 305px / repeat(auto-fit, minmax(100%, 1fr));
   justify-content: space-between;
   color: #222;
   font-size: 12px;
