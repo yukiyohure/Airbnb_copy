@@ -29,7 +29,7 @@ select:focus {
 select {
   border-radius: 4px;
 }
-.header-link {
+.header-link a {
   text-decoration: none;
   color: #484848;
 }
@@ -78,29 +78,34 @@ select {
 /* ヘッダー
 -------------------- */
 .main-menu {
-  display: none;
   width: 100%;
-  height: 5.125rem;
+  min-height: 100vh;
   font-size: 0.875rem;
-  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background: #fff;
 }
 .menu {
   display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 20px;
+  left: 30px;
 }
 .main-navigation {
   display: flex;
-  width: 100%;
+  align-content: center;
+  width: 100vw;
   height: 100%;
-  justify-content: space-between;
-  align-items: center;
-  margin-left:15px;
+  flex-direction: column;
+  padding: 3rem 0 0 1rem;
 }
 .main-navigation > li:hover {
   text-decoration-line: underline;
 }
 .logo {
-  display: inline-block;
-  margin: 25px 20px 25px 0;
   color: #008489;
 }
 .begin {
@@ -114,7 +119,18 @@ select {
 }
 .page-name {
   color: #469196;
-  border-bottom: 2px #469196 solid;
+}
+.sp-fixed-button {
+  position: fixed;
+  top: 80%;
+  right: 10%;
+}
+.airbnb-icon {
+  display: inline-block;
+  font-size: 27px; /* font-awesomeのサイズ */
+}
+.header-link {
+  height: 3rem;
 }
 
 /* 大きな背景画像
