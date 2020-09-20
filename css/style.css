@@ -75,8 +75,20 @@ select {
 
 /* ヘッダー
 -------------------- */
+header {
+  background: #fff;
+  width: 100%;
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  border-bottom: 1px solid #ebebeb;
+}
 .header-wrapper {
   display: flex;
+  width: 100%;
+  height: 5rem;
+  margin: 0 auto;
 }
 .airbnb-icon {
   font-size: 27px;
@@ -87,6 +99,7 @@ select {
   height: 82px;
   font-size: 0.875rem;
   justify-content: space-between;
+  padding: 0 2px;
 }
 .menu {
   display: flex;
@@ -115,6 +128,13 @@ select {
   background: #e64051;
   border-radius: 8px;
   align-self: center;
+  outline: none; /* クリックされた時の枠線を消す */
+  transition: border 50ms ease,
+  background 50ms ease;
+}
+.begin:active {
+  border: 1px solid #fff;/* 押下時にボタンが小さく見える */
+  background:#f3394b;
 }
 .page-name {
   color: #469196;
@@ -131,7 +151,7 @@ select {
   display: flex;
   justify-content: flex-end;
   align-items: baseline;
-  margin-bottom: 64px;
+  margin: 5rem 0 64px;
 }
 
 /* ホストの検索ボックス
@@ -289,7 +309,7 @@ select {
   padding-top: 32px;
 }
 .tessa-review {
-  margin-bottom: 96px;
+  margin-bottom: 10rem;
 }
 .tessa-review-content {
   margin-left: auto;

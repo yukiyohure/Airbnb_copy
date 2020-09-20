@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>Airbnb_copy</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link type="text/css" rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
   <link rel="stylesheet" href="./css/mobile.css" media="screen and (max-width: 600px)">
   <link rel="stylesheet" href="./css/style.css"
   media="screen and (min-width: 601px)">
@@ -13,28 +13,40 @@
   <script src="https://kit.fontawesome.com/89ac4b0242.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div id="header" class="header-wrapper wrapper">
-    <input class="sp" type="checkbox" id="check-hamburger">
-    <h1 class="airbnb-icon-wrapper">
-      <label class="airbnb-icon" for="check-hamburger"><i class="logo fab fa-airbnb fa-lg"></i></label>
-    </h1>
-    <header class="main-menu">
-      <div class="menu">
-        <nav>
-          <ul class="main-navigation">
-            <div class="header-link page-name">
-              <li>概要</li>
-            </div>
-            <li class="header-link"><a href="index.html">準備</a></li>
-            <li class="header-link"><a href="index.html">安全</a></li>
-            <li class="header-link"><a href="index.html">マネープラン</a></li>
-          </ul>
-        </nav>
-      </div>
-      <button class="begin js-fixed-button">はじめる</button>
-    </header>
-  </div>
-  <main>
+  <header>
+    <div id="header" class="header-wrapper wrapper">
+      <input class="sp" type="checkbox" id="check-hamburger">
+      <h1 class="airbnb-icon-wrapper">
+        <label class="airbnb-icon" for="check-hamburger"><i class="logo fab fa-airbnb fa-lg"></i></label>
+      </h1>
+      <nav id="mobile-header" class="sp js-header-hidden">
+        <ul class="js-main-navigation">
+          <div class="js-header-link header-link page-name">
+            <li>概要</li>
+          </div>
+          <li class="js-header-link header-link"><a href="index.html">準備</a></li>
+          <li class="js-header-link header-link"><a href="index.html">安全</a></li>
+          <li class="js-header-link header-link"><a href="index.html">マネープラン</a></li>
+        </ul>
+      </nav>
+      <section class="main-menu">
+        <div class="menu">
+          <nav>
+            <ul class="main-navigation">
+              <div class="header-link page-name">
+                <li>概要</li>
+              </div>
+              <li class="header-link"><a href="index.html">準備</a></li>
+              <li class="header-link"><a href="index.html">安全</a></li>
+              <li class="header-link"><a href="index.html">マネープラン</a></li>
+            </ul>
+          </nav>
+        </div>
+        <button id="fixed-button" class="top-begin begin">はじめる</button>
+      </section>
+    </div>
+  </header>
+  <main class="main-wrapper">
     <div class="main-bg big-bg">
       <section class="sp top-phrase-wrapper">
         <h1 class="sp top-phrase">
@@ -246,10 +258,6 @@
           <button class="practice-case-link">ホスト実践例をチェック</button>
         </div>
       </section> <!-- /.cistomer-review -->
-      <div class="pc subject subject-about-dream">
-        <div class="subject-decoration"></div>
-        <h2 class="subject-content">夢を共有する仲間が世界中に</h2>
-      </div>
       <div class="subject">
         <div class="subject-decoration"></div>
         <h2 class="subject-content">Airbnbについて</h2>
@@ -502,5 +510,6 @@
       </section>
     </div> <!-- /.footer-below -->
   </footer>
+  <script type="text/javascript" src="./js/script.js" defer></script>
 </body>
 </html>
