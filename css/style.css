@@ -29,7 +29,7 @@ select:focus {
 select {
   border-radius: 4px;
 }
-.header-link {
+.header-link > a{
   text-decoration: none;
   color: #484848;
 }
@@ -75,6 +75,12 @@ select {
 
 /* ヘッダー
 -------------------- */
+.header-wrapper {
+  display: flex;
+}
+.airbnb-icon {
+  font-size: 27px;
+}
 .main-menu {
   display: flex;
   width: 100%;
