@@ -141,6 +141,7 @@ nav{
   height: 100%;
   display: flex;
   align-items: center;
+  color: #008984;
   border-bottom: 2px solid #008984;
 }
 .airbnb-icon-wrapper {
