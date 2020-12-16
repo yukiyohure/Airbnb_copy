@@ -1,7 +1,8 @@
 # Airbnb_copy
-this is the copy site with a little design changed for practicing html/css.  
+this is the copy site with a little design changed for practicing html/css.   
 HTML/CSSを使ってpc/spのレスポンシブを久しぶりに作成してみたものになります。  
-![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/35441214/102364879-4cee6d80-3ffa-11eb-9b9c-5a8aaa263904.gif)
+[github-pages link](https://yukiyohure.github.io/Airbnb_copy/)  
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/35441214/102364879-4cee6d80-3ffa-11eb-9b9c-5a8aaa263904.gif)  
 
 ## 参考にしたサイト
 [現在のサイト](https://www.airbnb.jp/host/homes)  
